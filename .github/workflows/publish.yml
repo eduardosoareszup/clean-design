@@ -12,6 +12,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://npm.pkg.github.com'
+        repo-token: ${{ secrets.NPM_AUTH_TOKEN }}
         # Defaults to the user or organization that owns the workflow file
         scope: '@octocat'
     - run: |
@@ -19,5 +20,3 @@ jobs:
         npx ng build --prod
         cd ./dist/clean-design
         npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
