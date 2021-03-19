@@ -20,4 +20,4 @@ jobs:
         cd ./dist/clean-design
         npm publish
       env:
-        NODE_AUTH_TOKEN: NODE_AUTH_TOKEN
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
