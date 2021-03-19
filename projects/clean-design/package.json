@@ -1,5 +1,5 @@
 {
-  "name": "clean-design",
+  "name": "@eduardosoareszup/clean-design",
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^11.2.6",
