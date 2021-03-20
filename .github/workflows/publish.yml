@@ -18,6 +18,8 @@ jobs:
       with:
         org_name: eduardosoareszup
         auth_token: ${{ secrets.NODE_AUTH_TOKEN }}
+      env:
+        AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
     - run: |
         npm install
         npx ng build --prod
