@@ -1,0 +1,51 @@
+$smallFontSize: 12px;
+$defaultFontSize: 16px;
+$largeFontSize: 24px;
+
+$hover-opacity: .9;
+$active-opacity: .7;
+
+$primary-color: rgb(131,58,180);
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.button-solid {
+    border-radius: 100px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,150,1) 93%);
+    color: white;
+    &:hover {
+        background: rgba(131,58,180, $hover-opacity);
+        background: linear-gradient(90deg, rgba(131,58,180, $hover-opacity) 0%, rgba(253,29,150, $hover-opacity) 93%);
+    }
+    &:active {
+        background: rgba(131,58,180, $active-opacity);
+        background: linear-gradient(90deg, rgba(131,58,180, $active-opacity) 0%, rgba(253,29,150, $active-opacity) 93%);    
+    }
+}
+
+.button-outline {
+    border-radius: 100px;
+    border: 2px solid $primary-color;
+    background-color: white;
+    color: $primary-color;
+}
+
+.button-small {
+    padding: $smallFontSize;
+    font-size: $smallFontSize;
+}
+
+.button-default {
+    padding: $defaultFontSize;
+    font-size: $defaultFontSize;
+}
+
+.button-large {
+    padding: $largeFontSize;
+    font-size: $largeFontSize;
+}
