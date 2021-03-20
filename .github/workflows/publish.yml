@@ -20,4 +20,4 @@ jobs:
         cd ./dist/clean-design
         npm publish
       env:
-        NODE_AUTH_TOKEN: 6d32539441bd809858102ed9aaeaeefbc53605c7
+        NODE_AUTH_TOKEN: 667c39182e1f395bf9a3bcb78734d3a034015843
