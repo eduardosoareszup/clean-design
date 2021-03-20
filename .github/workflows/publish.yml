@@ -12,16 +12,16 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://npm.pkg.github.com'
-        username: eduardosoareszup
-        password: ${{ secrets.NODE_AUTH_TOKEN }}
-        email: eduardo.soares@zup.com.br
         # Defaults to the user or organization that owns the workflow file
         scope: '@octocat'
+    - uses: ferluisxd/create-npmrc@3
+      with:
+        org_name: eduardosoareszup
+        auth_token: ${{ secrets.NODE_AUTH_TOKEN }}
+        env:
+          AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
     - run: |
         npm install
         npx ng build --prod
         cd ./dist/clean-design
         npm publish
-      env:
-        GITHUB_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-        NPM_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
