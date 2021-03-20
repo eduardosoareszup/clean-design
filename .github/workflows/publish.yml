@@ -14,14 +14,10 @@ jobs:
         registry-url: 'https://npm.pkg.github.com'
         # Defaults to the user or organization that owns the workflow file
         scope: '@octocat'
-    - uses: ferluisxd/create-npmrc@3
-      with:
-        org_name: eduardosoareszup
-        auth_token: ${{ secrets.NODE_AUTH_TOKEN }}
-        env:
-          AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
     - run: |
         npm install
         npx ng build --prod
         cd ./dist/clean-design
         npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
